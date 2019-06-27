@@ -6,7 +6,7 @@ import "./script/ajax.js";
 window.addEventListener("load", function() {
     let barre_header = document.querySelector(".barre_header");
     let burger = document.querySelector("#burger");
-    if (document.querySelector(".codeconf") != "undefined") codeconf = document.querySelector(".codeconf");
+    if (document.querySelector(".codeconf") != "undefined") var codeconf = document.querySelector(".codeconf");
     function affiche_menu() {
         burger.classList.add("active");
         document.body.classList.add("scrollnone");
