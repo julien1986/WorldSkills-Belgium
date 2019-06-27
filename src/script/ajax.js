@@ -18,7 +18,6 @@ Axios.get(url).then(function(response) {
             let center = "Center";
             let couleur = "";
             classe.includes(center) ? (couleur = "jaune") : (couleur = "rose");
-
             list.innerHTML += `
             <li class="${couleur}">
               <a href="#">
