@@ -1,6 +1,8 @@
 require("normalize.css/normalize.css");
 require("./styles/index.scss");
 
+import "./script/ajax.js";
+
 window.addEventListener("load", function() {
     let barre_header = document.querySelector(".barre_header");
     let burger = document.querySelector("#burger");
