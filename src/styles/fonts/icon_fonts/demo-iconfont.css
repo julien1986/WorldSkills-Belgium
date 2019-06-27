@@ -1,0 +1,213 @@
+/*============================================================ font face import */
+@font-face {
+  font-family: 'ex_cepegra';
+  src:  url('webfonts/ex_cepegra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'ex_cepegra' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cross:before {
+  content: "\e6d8";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-checkmark:before {
+  content: "\e6dc";
+}
+.icon-checkmark2:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e649";
+}
+.icon-arrow-right2:before {
+  content: "\e902";
+}
+.icon-arrow-right3:before {
+  content: "\e903";
+}
+.icon-arrow-right4:before {
+  content: "\e904";
+}
+.icon-arrow-medium:before {
+  content: "\e76a";
+}
+.icon-screen:before {
+  content: "\e695";
+}
+.icon-tablet:before {
+  content: "\e60d";
+}
+.icon-earth:before {
+  content: "\e6c2";
+}
+.icon-eye:before {
+  content: "\e624";
+}
+.icon-eye-blocked:before {
+  content: "\e625";
+}
+.icon-code:before {
+  content: "\e718";
+}
+.icon-google:before {
+  content: "\e628";
+}
+.icon-googleplus:before {
+  content: "\e71f";
+}
+.icon-facebook:before {
+  content: "\e629";
+}
+.icon-facebook2:before {
+  content: "\e721";
+}
+.icon-instagram:before {
+  content: "\e722";
+}
+.icon-twitter:before {
+  content: "\e62a";
+}
+.icon-twitter2:before {
+  content: "\e723";
+}
+.icon-twitter3:before {
+  content: "\e724";
+}
+.icon-dribbble:before {
+  content: "\e732";
+}
+.icon-dribbble2:before {
+  content: "\e733";
+}
+.icon-dribbble3:before {
+  content: "\e734";
+}
+.icon-github2:before {
+  content: "\e73b";
+}
+.icon-file-xml:before {
+  content: "\e75a";
+}
+.icon-file-css:before {
+  content: "\e75b";
+}
+.icon-html5:before {
+  content: "\e6fa";
+}
+.icon-html52:before {
+  content: "\e75c";
+}
+.icon-css3:before {
+  content: "\e75d";
+}
+.icon-IE:before {
+  content: "\e6fd";
+}
+.icon-opera:before {
+  content: "\e6fe";
+}
+.icon-safari:before {
+  content: "\e75e";
+}
+/* end import */
+
+
+
+/*============================================================ font face demo.html */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555;
+  background: #fff;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.glyph_icon {
+  box-shadow:  inset 0 -1px 0  #e7e7e7;
+  padding-bottom: .25em;
+}
+
+.glyph_icon:hover [class^="icon"] {
+  color: inherit;
+  transform: scale(1.25) translateY(5px);
+}
+
+[class^="icon"] {
+  transform: translateY(5px);
+  color: #0ce;
+  position: absolute;
+  transition: all .6s;
+}
+
+.glyph {
+  font-size: 1.8rem;
+  padding-bottom: 1em;
+  margin-bottom: .75em;
+}
+
+.parent {
+  padding-top: 1.5rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  justify-content: center;
+  grid-column-gap: 2rem;
+}
+
+.txt_icon {
+  margin-left: 2.75rem;
+}
+
+.txt_icon {
+  cursor: pointer;
+}
+
+.ct_value {
+  display: block;
+  font-size: .8rem;
+  transition: all .3s;
+}
+
+.ct_value::first-letter {
+  letter-spacing: 1px;
+  margin-left: -2px;
+  font-weight: bold;
+}
+
+.ct_value:after {
+  transition: all .3s;
+  content:"<< content value";
+  margin-left: .25rem;
+  color: #0000;
+  cursor: pointer;
+}
+
+.ct_value:hover, .txt_icon:hover ~ .ct_value {
+  color:#0ce;
+}
+
+.ct_value:hover:after, .txt_icon:hover ~ .ct_value:after  {
+  color:#0ce;
+}
+/* end demo */

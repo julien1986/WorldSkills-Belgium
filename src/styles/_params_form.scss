@@ -1,0 +1,87 @@
+%form {
+  padding-top:1rem;
+    input[type='text'],  
+    input[type='mail'],  
+    input[type='tel'], 
+    input[type='email'], 
+    textarea {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 1px solid rgba(255,255,255,.4);
+      background-color: transparent;
+      padding: 1rem 0;
+      color: white;
+      font-size: 1rem;
+      font-family: $police2;
+      order: 2;
+      &:not(:placeholder-shown) + label,
+      &:focus + label {
+        top: -.3rem;
+        font-size:.8rem;
+        color:$grispolice;
+      }
+      &:focus {
+        border-bottom: 1px solid white;
+        outline:none;
+      }
+      &:not(:focus):valid {
+        border-bottom: 1px solid $bleu;
+       
+      }
+    }
+    P:nth-of-type(5){
+      margin-top:2rem;
+    }
+    textarea{
+      height:7rem;
+      padding:1rem;
+      border: 1px solid rgba(255,255,255,.4);
+      &:not(:placeholder-shown) + label,
+      :focus + label {
+        top:-1.5rem
+      }
+      &:not(:focus):valid {
+        border: 1px solid $bleu;
+        &:after{
+          content:"✓";
+        }
+      }
+    }
+    textarea + label{
+      left:1rem;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      label {
+        transition:all .3s ease;
+        position: absolute;
+        top: .9rem;
+      }
+      input[required] + label::after,
+      textarea[required] + label::after{
+        content:' *';
+        color:$bleu;
+      }
+       
+    }
+    input[type="submit"]{
+      color:$bleu;
+      border:1px solid $bleu;
+      background-color:transparent;
+      padding:1rem;
+      border-radius:2rem;
+      font-family:$police2;
+      text-transform:uppercase;
+      font-size:1rem;
+    }
+    &:invalid{
+      input[type="submit"]{
+        border:1px solid rgba(255,255,255,.4);
+        color:rgba(255,255,255,.4);
+      }
+    }
+}

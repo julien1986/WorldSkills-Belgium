@@ -21,113 +21,378 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
-<body>
-<!-- DEMO Project page content STARTS -->
-<div class="video-background">
-    <div class="video-foreground">
-        <iframe
-            src="https://www.youtube.com/embed/iIEIjo4dvSs?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=iIEIjo4dvSs"
-            frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div class="splash">
-    <div class="splash__content">
-        <div class="splash-title">
-            <a href="https://github.com/lifenautjoe/webpack-starter-basic" target="_blank"><img class="splash-title__img"
-                                                                   src="<%= require('./src/assets/logo-on-dark-bg.png') %>"
-                                                                   alt="webpack logo"></a>
+<body class="home">
+    <header>
+      <div class="barre_header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="../kaza_ref/logo_kazan.png" alt="Logo de la ville de Kazan" style="max-width: 200px;" title="Logo de la ville de Kazan">
+          </a>
         </div>
-        <div class="splash-overview">
-            <h1 class="splash-overview__heading">I'm a simple webpack 4 starter project for your basic web development needs.
-            </h1>
-            <div class="splash-overview__star">
-                <!-- Place this tag where you want the button to render. -->
-                <a class="github-button" href="https://github.com/lifenautjoe/webpack-starter-basic" data-show-count="true"
-                   aria-label="Star lifenautjoe/webpack-starter-basic on GitHub">Star</a>
-            </div>
-            <div class="splash-overview__conclusion">
-                <strong> No <a href="https://pragprog.com/the-pragmatic-programmer/extracts/wizards">wizard code</a>,
-                    understandable, scalable.</strong>
-            </div>
-            <div class="splash-overview__details">
-                A <strong>minimal</strong> yet <strong>rich</strong> set of features to get you going.
-                <div class="splash-overview-plugins">
-                    <button id="plugins-trigger" class="splash-overview-plugins__trigger">
-                        Show features
-                    </button>
-                    <ul id="plugins" class="splash-overview-plugins__list">
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/babel/babel-loader">Use the latest JavaScript</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/webpack-contrib/sass-loader">Write styles in Sass</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/webpack-contrib/url-loader">Load and bundle your assets</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank"
-                               href="https://github.com/webpack/webpack-dev-server">Start a development server and preview your work</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/postcss/autoprefixer">Automatic css vendor prefixes</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin">Optimizes scripts for production</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/NMFR/optimize-css-assets-webpack-plugin">Optimizes styles for production</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://github.com/jantimon/favicons-webpack-plugin">Generates favicons</a>
-                        </li>
-                        <li class="splash-overview-plugins__item">
-                            <a target="_blank" href="https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android">Adds mobile headers color</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="splash-overview-start">
-                <div class="splash-overview-start__command">
-                    git clone https://github.com/lifenautjoe/webpack-starter-basic PROJECT-NAME
-                </div>
-                <div class="splash-overview-start__command">
-                    cd PROJECT-NAME
-                </div>
-                <div class="splash-overview-start__command">
-                    npm install <span class="splash-overview-start__comment"># Install dependencies </span>
-                </div>
-                <div class="splash-overview-start__command">
-                    npm run kickstart <span class="splash-overview-start__comment"># Configure your project</span>
-                </div>
-                <div class="splash-overview-start__command">
-                    npm run start <span class="splash-overview-start__comment"># Start the development server</span>
-                </div>
-                <div class="splash-overview-start__command">
-                    npm run build <span class="splash-overview-start__comment"># Build for production</span>
-                </div>
-            </div>
-            <div class="splash-overview-issues">
-                <div>Have an issue or are in need of guidance?</div>
-                <strong>Open an issue <a
-                    href="https://github.com/lifenautjoe/webpack3-starter/issues">here</a>. </strong>
-            </div>
-            <div class="splash-overview-footer">
-                A project by <strong><a target="_blank" href="https://www.instagram.com/lifenautjoe">@lifenautjoe</a></strong>.
-            </div>
+        <div id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-</div>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101423651-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <div class="menu invisible">
+          <form method="get" action="" id="recherche">
+            <input type="search" placeholder="Entrez votre recherche" />
+            <input type="submit" name="search" value="rechercher" />
+          </form>
+          <nav>
+            <ul>
+              <li><a href="#visits">Visits</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#history">History</a></li>
+              <li><a href="#getTickets">GetTickets</a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div id="events" class="codeconf">
+          <h1>
+            <img src="images/logo.png" alt="Logo WorldSkillsBelgium" style="width: 6em;" title="Logo WorldSkillsBelgium">
+          </h1>
+          <p><span>August</span> <span>22 > 27</span></p>
+        </div>
+        <p>
+          The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…
+        </p>
+      </div>
+    </header>
+    <main>
+      <p class="see_schedule">
+        <a href="#"><span>See</span> <span>Schedule</span></a>
+      </p>
+      <section class="speakers" id="visits" lang="fr">
+        <h2>Que faire à Kazan ?</h2>
+        <ul>
+          <li class="jaune" id="chris_coyier">
+            <a href="#">
+              <div>
+                <img
+                  src="images/Kazan_Kremlin.jpg"
+                  alt="Kremlin de Kazan"
+                  title="Kremlin de Kazan"
+                />
+                <h3><span>Kremlin</span> de Kazan</h3>
+                <p>Center of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Kremlin historique du Tatarstan</h4>
+                <p>
+                  Construit sous les ordres d'Ivan IV, sur les ruines de l'ancien château des khans de Kazan. Il est inscrit sur la liste du patrimoine mondial de l'<abbr title="Organisation des Nations unies pour l'Éducation, la Science et la Culture">UNESCO</abbr>.
+                </p>
+                <p>
+                  <span><i class="fa fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="sara_soueidan">
+            <a href="#">
+              <div>
+                <img
+                  src="images/d0bad183d0bb_d188d0b0d180d0b8d184_4-tataristan-moque-qulsharif.jpg"
+                  alt="Mosquée Qolsharif" 
+                  title="Mosquée Qolsharif"
+                />
+                <h3><span>Mosquée</span> Qolsharif</h3>
+                <p>Center of the city</p>
+              </div>
+              <div class="detail">
+                <h4>La Renaissance ottomane</h4>
+                <p>
+                  La mosquée Qolşärif est un édifice religieux du kremlin de la ville de Kazan en Russie. Elle était la plus grande mosquée d'Europe après celle d'Istanbul.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="rose" id="eric_meyer">
+            <a href="#">
+              <div>
+                <img
+                  src="images/temple_multiple.jpg"
+                  alt="Le temple de toutes les religions"
+                  title="Le temple de toutes les religions"
+                />
+                <h3><span>Temple</span> of All Religions</h3>
+                <p>West of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Temple, mosquée, synagogue,...</h4>
+                <p>
+                  Le temple de toutes les religions est un complexe unique comprenant plusieurs types d'architecture religieuse.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="lea_verou">
+            <a href="#">
+              <div>
+                <img src="images/Baumana_Street_Kazan_Russia_2009_sept_06.jpg" alt="Bauman Street" title="Bauman Street" />
+                <h3><span>Bauman</span> Street</h3>
+                <p>Center of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Nikolay Bauman, révolutionnaire</h4>
+                <p>La Rue Baumana est une rue piétonne située au cœur de Kazan. La rue commence au pied du Kremlin et atteint la place Tukay, la place centrale de la ville.</p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="shirley_wu">
+            <a href="#">
+              <div>
+                <img
+                  src="images/aqua-photo00.jpg"
+                  alt="Aqua Park"
+                  title="Aqua Park"
+                />
+                <h3><span>Riviera</span>Aquapark</h3>
+                <p>Center of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Le pouvoir magique et curatif de l'eau</h4>
+                <p>
+                  L'un des plus grands au monde&nbsp;! Plus de 50 attractions différentes pour que chacun puisse trouver sa véritable vague d'émotions !
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="rose" id="luke_wroblewski">
+            <a href="#">
+              <div>
+                <img
+                  src="images/cat.jpg"
+                  alt="Cathédrale orthodoxe de l'Annonciation"
+                  title="Cathédrale orthodoxe de l'Annonciation"
+                />
+                <h3><span>Cathédrale</span> de l'Annonciation</h3>
+                <p>South of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Architecture orthodoxe russe</h4>
+                <p>
+                  Annexée au kremlin, c'est une église orthodoxe d'architecture  russe datant du XIVᵉ siècle et modifiée jusqu'au XIXᵉ siècle.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
 
-    gtag('config', 'UA-101423651-2');
-</script>
-<!-- DEMO Project page content ENDS -->
-</body>
+          <li class="rose" id="nicolas_gallagher">
+            <a href="#">
+              <div>
+                <img
+                  src="images/goluboe_ozero.jpg"
+                  alt="Le lac Ozero Goluboye"
+                  title="Le lac Ozero Goluboye"
+                />
+                <h3><span>Ozero</span> Goluboye</h3>
+                <p>North of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Lac kartique de Kazan</h4>
+                <p>
+                  Textuellement "Lac Bleu", sa profondeur maximale est de 18&nbsp;m. L'eau a rempli une caverne creusée dans du sédiment glaciaire qui s'est effondrée.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="val_head">
+            <a href="#">
+              <div>
+                <img src="images/musee.jpg" alt="Musée du Tatarstan" title="Musée du Tatarstan" />
+                <h3><span>Museum</span> Republic Tatarstan</h3>
+                <p>Center of the city</p>
+              </div>
+
+              <div class="detail">
+                <h4>L'histoire du Tatarstan</h4>
+                <p>
+                  Le musée principal occupe le bâtiment de l'ancien Gostiny Dvor, qui est un monument historique et culturel d'importance fédérale.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="rose" id="stephen_hay">
+            <a href="#">
+              <div>
+                <img
+                  src="images/lake.jpg"
+                  alt="Les lacs de Kaban"
+                  title="Les lacs de Kaban"
+                />
+                <h3><span>Kaban</span> Lakes</h3>
+                <p>East of the city</p>
+              </div>
+
+              <div class="detail">
+                <h4>De l'eau en pleine ville</h4>
+                <p>
+                  Les lacs de Kaban sont des lacs qui combiné avec d'autres (Nizhny Kaban, Verkhny Kaban et Sredny Kaban) font 1,86 kilomètres carrés, le plus grand lac du Tatarstan.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="rose" id="paul_irish">
+            <a href="#">
+              <div>
+                <img
+                  src="images/Kazan_Millennium_Bridge_08-2016.jpg"
+                  alt="Pont du Millennium de Kazan"
+                  title="Pont du Millennium de Kazan"
+                />
+                <h3><span>Millennium</span> Bridge</h3>
+                <p>North of the city</p>
+              </div>
+
+              <div class="detail">
+                <h4>Pont à haubans</h4>
+                <p>
+                  Le pont Millennium enjambe la rivière Kazanka. Construit pour le millième anniversaire de Kazan, célébré en 2005, la forme de son pylône est un M.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="nicole_sullivan">
+            <a href="#">
+              <div>
+                <img
+                  src="images/hermitage.jpg"
+                  alt="Hermitage de Kazan"
+                  title="Hermitage de Kazan"
+                />
+                <h3><span>Kazan</span> Hermitage</h3>
+                <p>Center of the city</p>
+              </div>
+
+              <div class="detail">
+                <h4>Palais des congrès et centre d'expositions</h4>
+                <p>
+                  Musée avec diverses expositions et centre de congrès internationnaux, l'Hermitage est un pôle culturel imposrtant du centre ville.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="jaune" id="brad_frost">
+            <a href="orators/brad-frost.html">
+              <div>
+                <img
+                  src="images/pierre-paul.jpg"
+                  alt="Eglise Saint-Pierre-et-Saint-Paul"
+                  title="Eglise Saint-Pierre-et-Saint-Paul"
+                />
+                <h3><span>Eglise</span> St Pierre et Paul</h3>
+                <p>Center of the city</p>
+              </div>
+              <div class="detail">
+                <h4>Architecture baroque</h4>
+                <p>
+                  L’église Saint-Pierre-et-Paul est une église orthodoxe baroque située dans la vieille ville. Elle est associée à Pierre Le Grand arrivé à Kazan avant sa campagne persienne.
+                </p>
+                <p>
+                  <span><i class="far fa-heart"></i></span>
+                  <span>Read more</span>
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="speakers" id="history" style="height:20em; border:1px solid black;">
+        <h2>Ligne du temps</h2>
+        <p>Veuillez insérer ici votre ligne du temps</p>
+      </section>
+    </main>
+    <footer>
+      <div class="getTickets"id="getTickets">
+        <a href="#">
+          <p>Get ticket</p>
+
+          <div>
+            <p>
+              <span class="creditcard">Carte de crédit</span>
+              <span class="paypal">Paypal</span>
+            </p>
+            <p><span>₽2600</span><span>RUR</span></p>
+          </div>
+        </a>
+      </div>
+      <section>
+        <div class="description" id="contact">
+          <div>
+            <h4>TatarStan Toursim</h4>
+            <h5>Ulitsa Maksima Gor'kogo, 19, Kazan, 420015</h5>
+            <p>
+              Kazan (en russe, Казань ; en tatar : Казан) est une ville de Russie et la capitale de la république du Tatarstan, une des subdivisions de la Russie. Sa population s'élevait à 1 231 878 habitants en 2017 ce qui en fait la sixième ville de Russie.
+            </p>
+          </div>
+        </div>
+        <img src="images/kazan-night.jpg" alt="Kazan by night" title="Kazan by night" />
+        <div class="helpdesk ">
+          <h5>Visit Tatarstan</h5>
+          <p>+7 843-206-00-14<br>(speaker’s support)</p>
+        </div>
+        
+        <div class="reseaux">
+          <h5>Follow US</h5>
+          <ul>
+            <li>
+              <a href="#" class="slack">#kazan2019</a>
+            </li>
+            <li>
+              <a href="#" class="twitter">@kazan2019</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <figure style="height: 14.3rem; margin-left: 4rem"><img src="images/startechs.png" alt="WorldSkillsBelgium Startech's Days" title="WorldSkillsBelgium Startech's Days" /></figure>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

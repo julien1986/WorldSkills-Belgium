@@ -1,0 +1,301 @@
+body > footer {
+  background-color: rgba(50, 63, 73, 0.8);
+  min-height: 20rem;
+  position: relative;
+  padding: 5rem 2rem 2rem 2rem;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 6rem;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/brent-cox-mid.jpg');
+    background-size: cover;
+    background-position: center 0 bottom -200px;
+    background-repeat: no-repeat;
+  }
+
+  section > img {
+    display: none;
+  }
+  section > * {
+    margin: 1rem 0;
+  }
+  .getTickets {
+    background-color: rgba(50, 63, 73, 0.8);
+    position: absolute;
+    top: -4rem;
+    box-shadow: 0 -2px 22px #858585;
+    width: 16rem;
+    left: 50%;
+    margin-left: -8rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    p {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      & > p:first-child {
+        display: block;
+        background-color: $bleu;
+        color: $bgcolor;
+        height: 4rem;
+        line-height: 4.2rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $police2;
+        font-weight: 600;
+
+        font-size: 1.2rem;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem;
+      font-size: 1.2rem;
+      font-family: $police2;
+      p:nth-of-type(1) {
+        width: 5rem;
+        display: flex;
+      }
+      p:nth-of-type(2) {
+        padding: 0.4rem;
+      }
+      span:nth-of-type(1) {
+        font-weight: 600;
+        margin-right: 0.2rem;
+        color: white;
+      }
+      span:nth-of-type(2) {
+        color: $bleu;
+      }
+      .paypal {
+        display: block;
+        background: url('../images/paypal.svg') center center no-repeat;
+        background-size: 1.4rem 1.4rem;
+        width: 4rem;
+        height: 2rem;
+        text-indent: 4rem;
+        overflow: hidden;
+        line-height: 2rem;
+      }
+      .creditcard {
+        display: block;
+        background: url('../images/card.svg') center center no-repeat;
+        background-size: 25px 20px;
+        width: 5rem;
+        height: 2rem;
+        text-indent: 6rem;
+        overflow: hidden;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .description {
+    font-family: $police2;
+    figure {
+      display: none;
+    }
+    h5,
+    h4 {
+      margin: 0;
+    }
+    h4 {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      background: url(../images/pin-red.svg) no-repeat left top;
+      padding-left: 4rem;
+    }
+    h5 {
+      font-family: $police_principale;
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+    }
+    p {
+      margin: 0;
+      line-height: 1.6rem;
+    }
+  }
+
+  .helpdesk,
+  .copyright {
+    h5 {
+      font-weight: bold;
+    }
+    p,
+    h5 {
+      margin: 0;
+      line-height: 1.6rem;
+    }
+  }
+  .helpdesk {
+    font-family: $police2;
+    align-self: center;
+  }
+  .copyright {
+    text-align: center;
+    figure {
+      margin: 0 0 1rem 0;
+      padding: 0;
+      height: 2.3rem;
+      overflow: hidden;
+      position: relative;
+      left: -1rem;
+      top: -0.5rem;
+    }
+  }
+  .sponsors {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .reseaux {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-family: $police2;
+
+    h5 {
+      margin: 1rem 0;
+      font-size: 1rem;
+      color: $bleu;
+      font-weight: 600;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      a {
+        color: $gris;
+        text-decoration: none;
+      }
+      .twitter,
+      .slack {
+        text-indent: 1rem;
+        &:before {
+          position: relative;
+          top: 0.7rem;
+          left: -1rem;
+        }
+      }
+      .twitter {
+        &:before {
+          content: '\ea96';
+          font-family: $police_icon;
+          font-size: 2rem;
+        }
+      }
+      .slack {
+        text-indent: 0.7rem;
+        &:before {
+          content: url(../images/slack.svg);
+          display: inline-block;
+          width: 2.5rem;
+          position: relative;
+          left: -1.8rem;
+        }
+      }
+    }
+  }
+
+  @media screen and(min-width:$breakpoint_mobile) {
+    section > * {
+      margin: 0;
+    }
+    section {
+      max-width: 978px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 2rem 3rem;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        'description helpdesk'
+        'sponsors sponsors'
+        'reseaux copyright';
+    }
+
+    .description {
+      grid-area: description;
+      h4 {
+        background: url(../images/pin-red.svg) no-repeat 21rem top;
+        padding-left: 0;
+      }
+    }
+    .helpdesk {
+      grid-area: helpdesk;
+    }
+    .sponsors {
+      grid-area: sponsors;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr;
+      padding: 0;
+    }
+    .reseaux {
+      grid-area: reseaux;
+    }
+    .copyright {
+      grid-area: copyright;
+      text-align: left;
+    }
+  }
+
+  @media screen and(min-width:$breakpoint_tablette) {
+    section {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        'description description image image'
+        'sponsors sponsors sponsors sponsors'
+        'reseaux reseaux helpdesk copyright';
+
+      & > img {
+        display: block;
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 0 8px #858585;
+      }
+    }
+
+    .description {
+      grid-area: description;
+      line-height: 1.4rem;
+    }
+    .helpdesk {
+      grid-area: helpdesk;
+      align-self: center;
+    }
+    .sponsors {
+      grid-area: sponsors;
+    }
+    .reseaux {
+      grid-area: reseaux;
+      align-self: center;
+    }
+    .copyright {
+      grid-area: copyright;
+      align-self: center;
+    }
+  }
+}

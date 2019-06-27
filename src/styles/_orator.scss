@@ -1,0 +1,154 @@
+.orator {
+  main {
+    & > p:first-child {
+      margin: 0 0 2rem 0;
+      a {
+        background: linear-gradient(white, $bggrisf);
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: $grispolice2;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    font-family: $police2;
+
+    figure {
+      margin: 0;
+      img {
+        width: 100%;
+      }
+    }
+    header {
+      padding: 2rem 2rem 0;
+      h1 {
+        margin-top: 1rem;
+        color: $grispolice;
+        text-align: center;
+        span {
+          font-family: $police_principale;
+          font-weight: 100;
+          font-size: 1.2em;
+        }
+      }
+      address {
+        color: $bleu;
+        font-style: normal;
+        text-align: center;
+      }
+      & > p {
+        color: $grispolice2;
+        letter-spacing: -1px;
+        font-size: 1.875rem !important;
+        line-height: 2.8rem;
+        font-weight: 600;
+      }
+    }
+    /* tous les p du main /!\ pas bon ça !!! */
+    p {
+      font-size: 1rem;
+      color: $grispolice2;
+      letter-spacing: -0.67px;
+      line-height: 2.125rem;
+      margin: 2rem 0;
+    }
+    header + p {
+      padding: 0 2rem;
+    }
+    section {
+      padding: 2rem 2rem 0;
+      background-color: $bggrisf;
+      h2 {
+        text-transform: uppercase;
+        color: $grispolice;
+        font-size: 1.8rem;
+      }
+    }
+    form{
+      @extend %form;
+      max-width:1024px;
+      margin:0 auto;
+      input[type='text'],  
+      input[type='mail'],  
+      input[type='tel'], 
+      input[type='email'], 
+      textarea {
+        color:$gris;
+        border-bottom: 1px solid rgba(0,0,0,.4);
+      }
+    }
+  }
+  @media screen and (min-width: $breakpoint_mobile) {
+    main header {
+      display: flex;
+      & > * {
+        flex: 1;
+      }
+      div p {
+        padding: 1rem;
+      }
+      h1,
+      address {
+        padding: 0 1rem;
+        text-align: left;
+      }
+    }
+    main section {
+      margin: 2rem;
+    }
+  }
+  @media screen and (min-width: $breakpoint_tablette) {
+    main header {
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      padding: 0 2rem;
+      figure {
+        max-width: 12rem;
+      }
+      h1,
+      address {
+        text-align: right;
+        padding: 0;
+      }
+      div > p {
+        padding: 0;
+      }
+      & + p {
+        text-align: right;
+      }
+    }
+    main > div {
+      display: flex;
+      justify-content: center;
+      & > * {
+        max-width: 29rem;
+      }
+
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+    main div > section {
+      margin: 0;
+    }
+  }
+
+  aside {
+    background-color: $bggrisf;
+    margin-top: 2rem;
+    padding: 3rem 0;
+    &>*{
+      max-width:800px;
+      margin:0 auto;
+    }
+  }
+  &.jaune {
+    main > div > section {
+      background-color: $bgjaune;
+    }
+  }
+  footer {
+    margin-top: 0;
+  }
+}

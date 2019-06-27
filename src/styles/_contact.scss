@@ -1,0 +1,46 @@
+.contact {
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    font-family: $police2;
+    color: white;
+    & > p {
+      font-family: $police1;
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  form {
+    @extend %form;
+  }
+  @media screen and (max-width: 768px) {
+    main {
+      padding: 2rem;
+    }
+    
+  }
+  @media screen and (min-width: 768px) {
+    main > * {
+      text-align: left !important;
+    }
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      p:nth-last-of-type(2), p:nth-last-of-type(3) {
+        grid-column: 1/-1;
+      }
+      p:nth-last-of-type(1){
+        grid-column: 2/ span 1;
+      }
+    }
+  }
+}

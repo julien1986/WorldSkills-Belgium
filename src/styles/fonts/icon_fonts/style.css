@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'ex_cepegra';
+  src:  url('webfonts/ex_cepegra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'ex_cepegra' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.icon-cross:before {
+  content: "\e6d8";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-checkmark:before {
+  content: "\e6dc";
+}
+.icon-checkmark2:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e649";
+}
+.icon-arrow-right2:before {
+  content: "\e902";
+}
+.icon-arrow-right3:before {
+  content: "\e903";
+}
+.icon-arrow-right4:before {
+  content: "\e904";
+}
+.icon-arrow-medium:before {
+  content: "\e76a";
+}
+.icon-screen:before {
+  content: "\e695";
+}
+.icon-tablet:before {
+  content: "\e60d";
+}
+.icon-earth:before {
+  content: "\e6c2";
+}
+.icon-eye:before {
+  content: "\e624";
+}
+.icon-eye-blocked:before {
+  content: "\e625";
+}
+.icon-code:before {
+  content: "\e718";
+}
+.icon-google:before {
+  content: "\e628";
+}
+.icon-googleplus:before {
+  content: "\e71f";
+}
+.icon-facebook:before {
+  content: "\e629";
+}
+.icon-facebook2:before {
+  content: "\e721";
+}
+.icon-instagram:before {
+  content: "\e722";
+}
+.icon-twitter:before {
+  content: "\e62a";
+}
+.icon-twitter2:before {
+  content: "\e723";
+}
+.icon-twitter3:before {
+  content: "\e724";
+}
+.icon-dribbble:before {
+  content: "\e732";
+}
+.icon-dribbble2:before {
+  content: "\e733";
+}
+.icon-dribbble3:before {
+  content: "\e734";
+}
+.icon-github2:before {
+  content: "\e73b";
+}
+.icon-file-xml:before {
+  content: "\e75a";
+}
+.icon-file-css:before {
+  content: "\e75b";
+}
+.icon-html5:before {
+  content: "\e6fa";
+}
+.icon-html52:before {
+  content: "\e75c";
+}
+.icon-css3:before {
+  content: "\e75d";
+}
+.icon-IE:before {
+  content: "\e6fd";
+}
+.icon-opera:before {
+  content: "\e6fe";
+}
+.icon-safari:before {
+  content: "\e75e";
+}
